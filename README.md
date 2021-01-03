@@ -15,4 +15,4 @@ Junior
 - Local Browser Storage
 - Object Oriented
 - Tabular Dataview
-- Dynamic Modal dialogues
+- Dynamic Modal Dialogues
