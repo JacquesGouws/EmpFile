@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/mobile_media_queries.css">
+        <link rel="stylesheet" href="css/tablet_media_queries.css">
+        <link rel="stylesheet" href="css/full_hd_media_queries.css">
+        <link rel="stylesheet" href="css/qhd_media_queries.css">
+        <link rel="stylesheet" href="css/uhd_media_queries.css">
+        <title>Welcome | EmpFile</title>
+    </head>
+
+    <body>
+
+        <!-- Main Header -->
+        <header id="main-header" class="bg-dark">
+            <h6 class="container text-light">Welcome to Empfile</h6>
+        </header>
+
+        <!-- Application -->
+        <main class="container">
+
+            <!-- Employee Records Card-->
+            <section class="shadow p-3 mb-5 bg-white rounded" id="employee-records">
+
+                <!-- Application Header -->
+                <div id="app-header">
+                    <h3></i>Employee Records</h3>
+                </div>
+
+                <!-- Main action buttons -->
+                <div id="main-action-btns">
+                    <button type="button" id="add-emp-btn" class="btn btn-primary main-btn"><i class="fa fa-plus" aria-hidden="true"></i> Add New Employee</button>
+                    <button type="button" id="remove-emps-btn" class="btn btn-danger main-btn"><i class="fa fa-minus" aria-hidden="true"></i> Remove Employees</button>
+                </div>
+
+                <!-- New employee form - hidden by default -->
+                <form action="" method="" id="add-emp-form">
+                    <h6 id="form-header">Enter new employee details below:</h6>
+                    <input type="number" class="form-control" id="id-input" placeholder="Eployee ID:" name="newEmpID">
+                    <input type="text" class="form-control" id="name-input" placeholder="Name:" name="newEmpName">
+                    <input type="text" class="form-control" id="surname-input" placeholder="Surname:" name="newEmpSurname">
+                    <input type="number" class="form-control" id="age-input" placeholder="Age:" name="newEmpAge">
+                    <div class="form-control">
+                        <label class="text-secondary" id="gender-label">Gender: </label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio"value="Male" checked name="newEmpGender">
+                            <label class="form-check-label">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="Female" name="newEmpGender">
+                            <label class="form-check-label">Female</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="Other" name="newEmpGender">
+                            <label class="form-check-label">Other</label>
+                        </div>
+                    </div>
+                    <select required class="form-control" id="department-select">
+                        <option value="" disabled selected>Department:</option>
+                        <option value="Sales">Sales</option>
+                        <option value="Management">Management</option>
+                        <option value="IT">IT</option>
+                        <option value="Admin">Administration</option>
+                        <option value="Admin">Human Resources</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <input type="text" class="form-control" id="occupation-input" placeholder="Occupation:" name="newEmpOccupation">
+                    <input type="tel" class="form-control" id="cell-input" placeholder="Cell:" name="newEmpCell">
+                    <input type="email" class="form-control" id="email-input" placeholder="Email:" name="newEmpEmail">
+                    <div id="form-buttons">
+                        <button type="button" class="btn btn-secondary" id="cancel-new-emp-btn">Cancel</button>
+                        <button type="button" class="btn btn-primary" id="save-new-emp-btn">Save</button>
+                        <button type="button" class="btn btn-secondary" id="cancel-edit-btn">Cancel Edit</button>
+                        <button type="button" class="btn btn-primary" id="save-edit-btn">Save Edit</button>
+                    </div>
+                </form>
+
+                <hr>
+
+                <!-- Data Display  -->
+                <div id="data-section">
+
+                    <!-- input for result filter -->
+                    <div id="search-form-group" class="form-group">
+                        <input type="text" class="form-control" id="search-input" name="searchEmployee" placeholder="Filter name:">
+                    </div>
+
+                    <!-- Data Table -->
+                    <div class="table-responsive" id="table-container">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th class="col-hide-p col-hide-t">Surname</th>
+                                    <th class="col-hide-p col-hide-t col-hide-d">Age</th>
+                                    <th class="col-hide-p col-hide-t col-hide-d">Gender</th>
+                                    <th class="col-hide-p">Department</th>
+                                    <th class="col-hide-p col-hide-t">Occupation</th>
+                                    <th class="col-hide-p col-hide-t col-hide-d">Cell</th>
+                                    <th class="col-hide-p col-hide-t col-hide-d">Email</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead> 
+                            <tbody>
+                                <!-- Rows generated with javascript -->
+                            </tbody>  
+                        </table>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Selected Employee Details -->
+            <aside class="shadow p-3 mb-5 bg-white rounded">
+                <h6>Employee Details</h6>
+                <hr>
+                <label for="id">Employee ID:</label>
+                <input type="text" readonly class="form-control-plaintext" id="id" value="-">
+                <label for="name">Name:</label>
+                <input type="text" readonly class="form-control-plaintext" id="name" value="-">
+                <label for="surname">Surname:</label>
+                <input type="text" readonly class="form-control-plaintext" id="surname" value="-">
+                <label for="age">Age:</label>
+                <input type="text" readonly class="form-control-plaintext" id="age" value="-">
+                <label for="gender">Gender:</label>
+                <input type="text" readonly class="form-control-plaintext" id="gender" value="-">
+                <label for="department">Department:</label>
+                <input type="text" readonly class="form-control-plaintext" id="department" value="-">
+                <label for="occupation">Occupation:</label>
+                <input type="text" readonly class="form-control-plaintext" id="occupation" value="-">
+                <label for="cell">Cell:</label>
+                <input type="tel" readonly class="form-control-plaintext" id="cell" value="-">
+                <label for="email">Email:</label>
+                <input type="email" readonly class="form-control-plaintext" id="email" value="-">
+            </aside>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-dark">
+            <p class="text-light">Thank you for using EmpFile</p>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script src="js/employee_class.js"></script>
+        <script src="js/storage_class.js"></script>
+        <script src="js/gui_class.js"></script>
+        <script src="js/alert_class.js"></script>
+        <script src="js/validation_class.js"></script>
+        <script src="js/modals_class.js"></script>
+        <script src="js/app.js"></script>
+
+    </body>
+
+</html>

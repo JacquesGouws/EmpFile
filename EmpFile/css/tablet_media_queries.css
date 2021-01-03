@@ -1,0 +1,28 @@
+/* Main target: 768 x 1024 */
+@media screen and (min-width: 501px) and (max-width: 800px){
+    
+    /* UTILITY CLASSES */ 
+
+    .col-hide-t{
+        display: none;
+    }
+
+    /* APPLICATION CONTAINER */
+    
+    main{
+        grid-template-columns: 1fr;
+    }
+
+    /* EMPLOYEE RECORDS - LEFT COLUMN */
+
+    #employee-records{
+        margin-bottom: 10px!important;
+    }
+
+    /* EMPLOYEE DETAILS - RIGHT COLUMN */
+
+    .mb-5{
+        margin-bottom: 20px!important;
+    }
+
+}

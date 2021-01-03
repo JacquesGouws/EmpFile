@@ -1,0 +1,45 @@
+/* Main target: 1920 x 1080 */
+@media screen and (min-width: 1367px) and (max-width: 1920px){
+
+    /* ROOT FONT SIZE */
+
+    html{
+        font-size: 140%;
+    }
+
+    /* APPLICATION CONTAINER */
+
+    .container{
+        max-width: 80%;
+    }
+
+    main{
+        grid-gap: 20px;
+    }
+
+    /* PAGE HEADER */
+
+    #main-header{
+        padding: 20px 0px;
+        margin-bottom: 30px;
+    }
+
+    /* EMPLOYEE RECORDS SECTION - LEFT COLUMN */
+
+    #main-action-btns{
+        margin-bottom: 10px;
+    }
+
+    /* TABLE */
+
+    .table-responsive{
+        max-height: 400px;
+    }
+
+    /* FOOTER */
+
+    footer{
+        padding: 20px;
+    }
+
+}

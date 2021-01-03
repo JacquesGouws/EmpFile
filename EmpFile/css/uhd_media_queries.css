@@ -1,0 +1,66 @@
+/* Main target: 3840 x 2160 */
+@media screen and (min-width: 2561px){
+
+    /* ROOT FONT SIZE */
+
+    html{
+        font-size: 200%;
+    }
+
+    /* APPLICATION CONTAINER */
+
+    .container{
+        max-width: 60%;
+    }
+
+    main{
+        grid-gap: 40px;
+    }
+
+    /* PAGE HEADER */
+    #main-header{
+        padding: 50px 0px;
+        margin-bottom: 80px;
+    }
+
+    /* EMPLOYEE RECORDS SECTION - LEFT COLUMN */
+
+    #main-action-btns{
+        margin-bottom: 30px;
+    }
+
+    /* FORM */
+
+    #form-header{
+        margin: 40px 0px;
+    }
+
+    #add-emp-form input{
+        margin: 30px 0px;
+    }
+
+    #department-select{
+        margin-top: 30px;
+    }
+
+    #form-buttons{
+        margin: 40px 0px;
+    }
+
+    /* TABLE */
+    
+    .table-responsive{
+        max-height: 600px;
+    }
+
+    .action-btn-container button{
+        margin-right: 10px;
+    }
+    
+    /* FOOTER */
+
+    footer{
+        padding: 50px;
+    }
+    
+}

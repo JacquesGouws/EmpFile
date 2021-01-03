@@ -1,0 +1,126 @@
+/* GLOBAL TAGS */
+
+i{
+    color: white;
+}
+
+/* UTILITY CLASSES */
+
+.disabled{
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.80;
+}
+
+.col-hide-d{
+    display: none;
+}
+
+.action-btn-container{
+    display: flex;
+}
+
+/* PAGE HEADER */
+
+#main-header{
+    border-bottom: 1px solid lightgray;
+    padding: 10px 0px;
+    margin-bottom: 20px;
+}
+
+/* APPLICATION CONTAINER*/
+
+main{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 10px;
+}
+
+/* EPLOYEE RECORDS - LEFT COLUMN */
+
+#employee-records{
+    align-self: flex-start;
+}
+
+#add-emp-btn{
+    margin: 10px 0px;
+}
+
+#data-section{
+    padding-bottom: 20px;
+    width: 100%;
+    overflow: auto;
+}
+
+#search-form-group{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/* DATA TABLE */
+
+.table-responsive{
+    max-height: 300px;
+    max-width: 100%;
+}
+
+
+/* EMPLOYEE DATA - RIGHT COLUMN */
+
+aside{
+    align-self: flex-start;
+    font-weight: bold;
+}
+
+aside h6{
+    text-align: center;
+}
+
+/* NEW EMPLOYEE FORM */
+
+#add-emp-form{
+    display: none;
+}
+
+
+#form-header{
+    margin: 20px 0px;
+}
+
+#add-emp-form input{
+    margin: 10px 0px;
+}
+
+#add-emp-form input[type="radio"]{
+    margin: 5px;
+}
+
+.action-btn-container button{
+    margin-right: 3px;
+}
+
+#department-select{
+    margin-top: 10px;
+}
+
+select:invalid{
+    color: gray; 
+}
+
+#form-buttons{
+    margin: 20px 0px;
+}
+
+#cancel-edit-btn, #save-edit-btn{
+     display: none; 
+}
+
+/* PAGE FOOTER */
+
+footer{
+    padding: 10px;
+}
+
+footer p{
+    text-align: center;
+}
